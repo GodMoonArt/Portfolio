@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>The art of GodMoon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.4/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  // Burger menus
+  document.addEventListener('DOMContentLoaded', function () {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+      for (var i = 0; i < burger.length; i++) {
+        burger[i].addEventListener('click', function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle('hidden');
+          }
+        });
+      }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+      for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener('click', function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle('hidden');
+          }
+        });
+      }
+    }
+
+    if (backdrop.length) {
+      for (var i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener('click', function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle('hidden');
+          }
+        });
+      }
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+<body>
+  <main class="main-c mx-auto sm:px-0 md:px-2 lg:px-4 xl:px-6">
+    <!-- title text -->
+    <div class="title-c normal-bold py-8">
+      <h1>
+        GodMoon <strong>portfolio</strong>
+      </h1>
+      <p">
+        <strong>
+          what the dog doin'
+        </strong>
+        </p>
+    </div>
+    <br>
+    <!-- title image -->
+    <div>
+      <img src="images/GodMoon_Logo.png" alt="">
+      <!-- skill cards -->
+    </div>
+    <br>
+    <!-- about quote lines -->
+    <div class="grid sm:grid-cols-1 md:grid-cols-5 border-t-4 border-b-4 border-black py-8">
+      <div class="col-span-1">
+        <h2>about me</h2>
+      </div>
+      <div class="sm:col-span-1 md:col-span-4">
+        <p>
+          Greetings, i love surfing and rock and roll. I'm a Concept artist, currently working mainly as a freelancer.
+          I love creating narrations throughout my ilustrations. I'm in love with creating stories.
+        </p>
+      </div>
+    </div>
+    <br>
+    <!-- paragraph -->
+    <div class="py-8">
+      <p>
+        "We think too much and feel to little" -Charlie Chaplin
+      </p>
+      <br>
+      <p>
+        <strong>
+          "I am just smart enough to know how dumb i am" -Richard Feynman
+        </strong>
+      </p>
+    </div>
+    <br>
+    <!-- grid items -->
+    <div class="">
+      <h1 class="text-center">
+        My Work
+      </h1>
+    </div>
+    <div class="flex grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center gap-2 py-8">
+      <div><img src="images/Admiration.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Concept The reunion.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Concepts.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+    </div>
+    <br>
+    <!-- carousel -->
+    <div id="carouselExampleCrossfade" class="carousel slide carousel-fade relative py-8" data-bs-ride="carousel">
+      <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+        <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner relative w-full overflow-hidden">
+        <div class="carousel-item active float-left w-full">
+          <img src="images/Diamond.jpg" class="block w-full" alt="diamond" />
+        </div>
+        <div class="carousel-item float-left w-full">
+          <img src="images/Spiral Fountain.jpg" class="block w-full" alt="spiral fountain" />
+        </div>
+        <div class="carousel-item float-left w-full">
+          <img src="images/Yokai.jpg" class="block w-full" alt="yokai" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+        type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+        type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="next">
+        <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+    <div class="flex grid sm:grid-cols-2 md:grid-cols-2  normal-bold  py-8">
+      <div class="col-span-1">
+        <h2>
+          Business Contact:
+        </h2>
+        <p>
+           godmoonwicca@gmail.com 
+        </p>
+        <br>
+        <div>
+          <span class=""><a href="https://www.instagram.com/godmoonart/"><i class="fab fa-2x px-2 fa-instagram f-orange"></i></a></span>
+          <span class=""><a href="https://www.pixiv.net/en/users/77558657"><i class="fab fa-2x px-2 fa-pinterest-p f-orange"></i></a></span>
+          <span class=""><a href="https://www.artstation.com/godmoon_artworks"><i class="fab fa-2x px-2 fa-artstation f-orange"></i></a></span>
+        </div>
+        <br>
+      </div>
+      <div class="col-span-1">
+        <div>
+          <div class='bg-white rounded-lg overflow-hidden mx-auto'>
+            <div class='items-center px-2 py-3'>
+              <form class="" action="mailto:godmoonwicca@gmail.com" method="post" enctype="text/plain">
+                <div class=" items-center border-b border-black py-2">
+                  <input
+                    class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                    type="text" name="name" placeholder="name" aria-label="Full name">
+                </div>
+                <br>
+                <div class="flex items-center border-b border-black py-2">
+                  <input
+                    class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                    type="text" name="mail" placeholder="email" aria-label="mail">
+                </div>
+                <br>
+                <div class="flex items-center border-b border-black py-2">
+                  <input
+                    class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                    type="textarea" value="comment" placeholder="Write your message..." aria-label="Full name">
+                </div>
+                <br>
+                <input class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" type="submit" value="Send">
+                <br>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="text-center footer-content py-8">
+      <p>
+        copyright @ 2022
+      </p>
+    </div>
+  </footer>
+</body>

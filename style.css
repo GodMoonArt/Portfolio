@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+
+
+  
+  --font-h1: calc(1.525rem + 3.3vw); 
+  --font-p: calc(1.25rem);
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --font-h1: 4rem;
+  }
+}
+
+/* font */
+  h1 {
+    font-size: var(--font-h1) !important;
+    font-family: Roboto !important;
+  }
+  p{
+    font-size: var(--font-p) !important;
+    font-family: Roboto !important;
+  }
+.f-orange {
+  color: #ff9d00;
+}
+
+
+
+/* layout */
+.main-c{
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .main-c{
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+.title-c {
+  text-align: center !important;
+}
+
+.about-c {
+  display: flex;
+  gap: 40%;
+
+}
+.about-left {
+ font-weight: bolder !important;
+  align-items: center !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.about-right {
+
+}
+
+.contact-c{
+
+}
+
+.contact-details{
+
+}
+
+.contact-form{
+
+}
+
+#footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:#999;
+}
+
+.footer-content {
+ align-items: center;
+
+}
+
+
+/* color */
+strong {
+  color: #ff9d00
+}
+.normal-bold p
+  strong {
+    color: #000
+  }
