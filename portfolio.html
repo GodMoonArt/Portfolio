@@ -2,138 +2,125 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.4/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-  
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-          }
-        }
-      }
-    </script>
-    <link rel="stylesheet" href="style.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.4/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Burger menus
-    document.addEventListener('DOMContentLoaded', function () {
-      // open
-      const burger = document.querySelectorAll('.navbar-burger');
-      const menu = document.querySelectorAll('.navbar-menu');
-  
-      if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-          burger[i].addEventListener('click', function () {
-            for (var j = 0; j < menu.length; j++) {
-              menu[j].classList.toggle('hidden');
-            }
-          });
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
         }
       }
-  
-      // close
-      const close = document.querySelectorAll('.navbar-close');
-      const backdrop = document.querySelectorAll('.navbar-backdrop');
-  
-      if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-          close[i].addEventListener('click', function () {
-            for (var j = 0; j < menu.length; j++) {
-              menu[j].classList.toggle('hidden');
-            }
-          });
-        }
-      }
-  
-      if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-          backdrop[i].addEventListener('click', function () {
-            for (var j = 0; j < menu.length; j++) {
-              menu[j].classList.toggle('hidden');
-            }
-          });
-        }
-      }
-    });
+    }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-  
-  <script>
-    // ---------Responsive-navbar-active-animation-----------
-    function test() {
-      var tabsNewAnim = $('#navbarSupportedContent');
-      var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
-      var activeItemNewAnim = tabsNewAnim.find('.active');
-      var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-      var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-      var itemPosNewAnimTop = activeItemNewAnim.position();
-      var itemPosNewAnimLeft = activeItemNewAnim.position();
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  // Burger menus
+  document.addEventListener('DOMContentLoaded', function () {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+      for (var i = 0; i < burger.length; i++) {
+        burger[i].addEventListener('click', function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle('hidden');
+          }
+        });
+      }
+    }
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+    if (close.length) {
+      for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener('click', function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle('hidden');
+          }
+        });
+      }
+    }
+    if (backdrop.length) {
+      for (var i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener('click', function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle('hidden');
+          }
+        });
+      }
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+<script>
+  // ---------Responsive-navbar-active-animation-----------
+  function test() {
+    var tabsNewAnim = $('#navbarSupportedContent');
+    var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+    var activeItemNewAnim = tabsNewAnim.find('.active');
+    var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+    var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+    var itemPosNewAnimTop = activeItemNewAnim.position();
+    var itemPosNewAnimLeft = activeItemNewAnim.position();
+    $(".hori-selector").css({
+      "top": itemPosNewAnimTop.top + "px",
+      "left": itemPosNewAnimLeft.left + "px",
+      "height": activeWidthNewAnimHeight + "px",
+      "width": activeWidthNewAnimWidth + "px"
+    });
+    $("#navbarSupportedContent").on("click", "li", function (e) {
+      $('#navbarSupportedContent ul li').removeClass("active");
+      $(this).addClass('active');
+      var activeWidthNewAnimHeight = $(this).innerHeight();
+      var activeWidthNewAnimWidth = $(this).innerWidth();
+      var itemPosNewAnimTop = $(this).position();
+      var itemPosNewAnimLeft = $(this).position();
       $(".hori-selector").css({
         "top": itemPosNewAnimTop.top + "px",
         "left": itemPosNewAnimLeft.left + "px",
         "height": activeWidthNewAnimHeight + "px",
         "width": activeWidthNewAnimWidth + "px"
       });
-      $("#navbarSupportedContent").on("click", "li", function (e) {
-        $('#navbarSupportedContent ul li').removeClass("active");
-        $(this).addClass('active');
-        var activeWidthNewAnimHeight = $(this).innerHeight();
-        var activeWidthNewAnimWidth = $(this).innerWidth();
-        var itemPosNewAnimTop = $(this).position();
-        var itemPosNewAnimLeft = $(this).position();
-        $(".hori-selector").css({
-          "top": itemPosNewAnimTop.top + "px",
-          "left": itemPosNewAnimLeft.left + "px",
-          "height": activeWidthNewAnimHeight + "px",
-          "width": activeWidthNewAnimWidth + "px"
-        });
-      });
+    });
+  }
+  $(document).ready(function () {
+    setTimeout(function () { test(); });
+  });
+  $(window).on('resize', function () {
+    setTimeout(function () { test(); }, 500);
+  });
+  $(".navbar-toggler").click(function () {
+    $(".navbar-collapse").slideToggle(300);
+    setTimeout(function () { test(); });
+  });
+  // --------------add active class-on another-page move----------
+  jQuery(document).ready(function ($) {
+    // Get current path and find target link
+    var path = window.location.pathname.split("/").pop();
+    // Account for home page with empty path
+    if (path == '') {
+      path = 'index.html';
     }
-    $(document).ready(function () {
-      setTimeout(function () { test(); });
-    });
-    $(window).on('resize', function () {
-      setTimeout(function () { test(); }, 500);
-    });
-    $(".navbar-toggler").click(function () {
-      $(".navbar-collapse").slideToggle(300);
-      setTimeout(function () { test(); });
-    });
-  
-  
-  
-    // --------------add active class-on another-page move----------
-    jQuery(document).ready(function ($) {
-      // Get current path and find target link
-      var path = window.location.pathname.split("/").pop();
-  
-      // Account for home page with empty path
-      if (path == '') {
-        path = 'index.html';
-      }
-  
-      var target = $('#navbarSupportedContent ul li a[href="' + path + '"]');
-      // Add active class to target link
-      target.parent().addClass('active');
-    });
-  
-  
-  
-  
+    var target = $('#navbarSupportedContent ul li a[href="' + path + '"]');
+    // Add active class to target link
+    target.parent().addClass('active');
+  });
   // Add active class on another page linked
   // ==========================================
   // $(window).on('load',function () {
@@ -151,13 +138,12 @@
   //         }
   //     })
   // });
-  </script>
+</script>
+
 <body>
-
-
   <nav class="navbar navbar-expand-custom navbar-mainbg">
     <a class="navbar-brand navbar-logo px-0 py-0" href="#">
-      <img src="images/GodMoon_Logo_inverted.png" class="w-16 rounded-full" alt="Avatar"/>
+      <img src="images/GodMoon_Logo_inverted.png" class="w-16 rounded-full" alt="Avatar" />
     </a>
     <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -184,38 +170,87 @@
       </ul>
     </div>
   </nav>
-
-
   <main class="main-c mx-auto sm:px-0 md:px-2 lg:px-4 xl:px-6 content">
-            <!-- grid items -->
+    <!-- grid items -->
     <div class="">
-        <h1 class="text-center">
-          My Work
-        </h1>
+      <h1 class="text-center">
+        My Work
+      </h1>
+    </div>
+    <!-- <div class="flex grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center gap-2 py-8">
+      <div><img src="images/Admiration.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Spiral Fountain.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Concept Ne Zha.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Concept Wolfwalkers.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Concept The reunion.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Eira.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Yokai.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div><img src="images/Diamond.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+    </div> -->
+    <div class="gallery" id="gallery">
+      <div class="gallery-item">
+        <div class="gallery-image"><img src="images/Admiration.jpg" alt=""></div>
       </div>
-      <div class="flex grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center gap-2 py-8">
-        <div><img src="images/Admiration.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
-        <div><img src="images/Spiral Fountain.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
-        <div><img src="images/Concept Ne Zha.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
-        <div><img src="images/Concept Wolfwalkers.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
-        <div><img src="images/Concept The reunion.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
-        <div><img src="images/Eira.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
-        <div><img src="images/Yokai.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
-        <div><img src="images/Diamond.jpg" alt="" class="max-w-full h-auto rounded-lg"></div>
+      <div class="gallery-item">
+        <div class="gallery-image"><img src="images/Concept The reunion.jpg" alt=""></div>
       </div>
-      <br>
-    </main>
+      <div class="gallery-item">
+        <div class="gallery-image"><img src="images/Concept Ne Zha.jpg" alt=""></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-image"><img src="images/Concept Wolfwalkers.jpg" alt=""></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-image"><img src="images/Diamond.jpg" alt=""></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-image"><img src="images/Eira.jpg" alt=""></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-image"><img src="images/Spiral Fountain.jpg" alt=""></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-image"><img src="images/Yokai.jpg" alt=""></div>
+      </div>
+    </div>
+    <br>
+  </main>
+  <script>
+    var gallery = document.querySelector('#gallery');
+var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+var getHeight = function (item) { return item.querySelector('.gallery-image').getBoundingClientRect().height; };
+var resizeAll = function () {
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        var el = item;
+        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+    });
+};
+gallery.querySelectorAll('img').forEach(function (item) {
+    item.classList.add('byebye');
+        console.log(item.src);
+        var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            var gitem = item.parentElement.parentElement;
+            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+            item.classList.remove('byebye');
+});
+window.addEventListener('resize', resizeAll);
+gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {        
+        item.classList.toggle('full');        
+    });
+});
 
-
-    <footer class="footer">
-        <div class="text-center footer-content py-8">
-            <p>
-                copyright @ 2022
-            </p>
-        </div>
-    </footer>
-
-
+  </script>
+  <footer class="footer">
+    <div class="text-center footer-content py-8">
+      <p>
+        copyright @ 2022 <a class="px-6" href="contact.html">contact</a><span><a href="https://www.instagram.com/godmoonart/"><i class="fab fa-x px-1 fa-instagram"></i></a></span><a href="https://www.artstation.com/godmoon_artworks"><span class="fab fa-x px-1 fa-artstation"></span></a><a href="https://www.pixiv.net/en/users/77558657"><span class="fab fa-x px-3 fa-pinterest-p"></span></a>
+      </p>
+    </div>
+  </footer>
 </body>
 
 </html>
